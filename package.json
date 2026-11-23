@@ -1,0 +1,63 @@
+{
+  "name": "mineflayer-mod-support",
+  "version": "0.1.0",
+  "description": "Mineflayer Mod Support 是一个轻量级、纯 Node.js 的模组协议与交互兼容层。它通过动态数据发现、协议解析和按需行为适配，让 Mineflayer 尽可能直接操作 Forge、NeoForge、Fabric 服务器中的模组内容，而不依赖完整 Mod 客户端。",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src/",
+    "tools/",
+    "examples/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "README.zh-CN.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node tools/check.js",
+    "typecheck": "tsc --noEmit --strict --skipLibCheck --module commonjs --target es2022 type-tests/framework-usage.ts",
+    "example": "node examples/basic-bot.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "minecraft-protocol": ">=1.67.0 <2",
+    "mineflayer": ">=4.39.0 <5"
+  },
+  "keywords": [
+    "minecraft",
+    "mineflayer",
+    "forge",
+    "neoforge",
+    "fabric",
+    "modded",
+    "protocol",
+    "prismarine"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "minecraft-data": "^3.119.0",
+    "prismarine-nbt": "^2.8.0",
+    "protodef": "^1.19.0",
+    "semver": "7.8.6",
+    "smol-toml": "1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxleMax/mineflayer-mod-support.git"
+  },
+  "homepage": "https://github.com/AxleMax/mineflayer-mod-support#readme",
+  "bugs": {
+    "url": "https://github.com/AxleMax/mineflayer-mod-support/issues"
+  },
+  "bin": {
+    "mms-adapter": "tools/adapter.js"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
